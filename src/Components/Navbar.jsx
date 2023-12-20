@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/shuvajit-maitra-logo.png";
 const Navbar = () => {
   const navLinks = ["Home",'Skill', "Project", 'Eduction', "About", 'Contact'];
@@ -23,9 +24,12 @@ const Navbar = () => {
           alt="logo"
           className="w-10 h-10 "
         />
-        Shuvajit Maitra
+        <h3 className="text-xl font-bold">SCC Technovision</h3>
       </div>
-      <div  className="flex gap-3 flex-wrap justify-center">{navLinks.map((nav) => handleNavLink(nav))}</div>
+      <div  className="flex gap-3 flex-wrap justify-center">{navLinks.map((nav) => handleNavLink(nav))} <Link to="/login">Login</Link>
+      <Link to="/register">Join Us</Link>
+      </div>
+
     </div>
   );
 };
