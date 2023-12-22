@@ -1,5 +1,5 @@
 import { FaBars, FaShoppingBag } from "react-icons/fa";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { MdOutlineHome } from "react-icons/md";
 import { IoStorefrontOutline } from "react-icons/io5";
 
@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet";
 import Footer from "../Components/Footer";
 
 const Dashboard = () => {
+  const location = useLocation()
   const navStyle ="bg-[#7cb518] flex justify-center items-center gap-1 font-medium text-white my-4 py-1 rounded w-full";
   const navActive = "text-[#7cb518] border-2 border-[#7cb518] flex justify-center items-center gap-1 font-medium  my-4 py-1 rounded w-full"
  
@@ -23,6 +24,15 @@ const Dashboard = () => {
         >
           <MdOutlineHome />
           Add Task
+        </NavLink>
+      </li>
+       <li>
+        <NavLink
+          className={location.pathname === "/dashboard/task" ? navActive  : navStyle}
+          to="/dashboard/task"
+        >
+          <MdOutlineHome />
+          Show Task
         </NavLink>
       </li>
       </>
@@ -51,10 +61,10 @@ const Dashboard = () => {
   return (
     <div className="h-full flex text-center ">
         <Helmet>
-        <title>TrendLoom | Dashboard</title>
+        <title>SCC Technovision | Dashboard</title>
       </Helmet>
       <div className="hidden lg:block w-64 bg-zinc-200 px-10 py-5 space-y-3">
-        <span className="text-xl font-medium flex justify-center items-center gap-2"><IoStorefrontOutline /> TrendLoom</span>
+        <span className="text-xl font-medium flex justify-center items-center gap-2"><IoStorefrontOutline /> SCC Technovision</span>
         <ul>{dashLink}</ul>
       </div>
 

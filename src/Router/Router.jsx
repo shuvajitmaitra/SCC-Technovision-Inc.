@@ -7,6 +7,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Dashboard from "../MainLayout/Dashboard";
 import AddTask from "../Pages/Dashboard/AddTask/AddTask";
+import Task from "../Pages/Dashboard/Task/Task";
 
 const Router = createBrowserRouter([
     {
@@ -34,7 +35,11 @@ const Router = createBrowserRouter([
         {
           path: "add-task",
           element: <AddTask/>
-        }
+        },
+        {
+          path: "task",
+          element: <Task/>
+        },
       ]
     }
   ])
