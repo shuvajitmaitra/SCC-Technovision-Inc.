@@ -1,21 +1,14 @@
 import Banner from "../Components/Banner";
-import { Contact } from "../Components/Contact";
-import Footer from "../Components/Footer";
-import Navbar from "../Components/Navbar";
+import UserTypes from "../Components/UserTypes";
+import { Contact } from "./Contact/Contact";
 
 const Home = () => {
   return (
     <div>
-      <nav >
-             <Navbar></Navbar>
-             </nav>
       <main>
-        <Banner></Banner> 
-    
+        <Banner></Banner>
+        <UserTypes />
         <Contact />
-        <div className="bg-slate-700">
-          <Footer />
-        </div>
       </main>
     </div>
   );

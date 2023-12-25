@@ -58,17 +58,17 @@ const Register = () => {
   };
 
   return (
-    <div className="pt-32 md:pt-20">
-      <h3 className="text-xl md:text-4xl font-bold text-center">
-        Register Now!
-      </h3>
+    <div className="py-10 max-w-5xl mx-auto">
+    <h3 className="text-3xl border-b-2 lg:text-6xl font-bold text-white pb-2 mb-10">
+    Sign In
+  </h3>
      
-      <form  onSubmit={handleRegister} className="space-y-3 w-full md:w-1/2 mx-auto flex flex-col justify-center items-center">
+      <form  onSubmit={handleRegister} className="space-y-3 p-6 rounded-lg w-full md:w-[400px] border mx-auto flex flex-col justify-center items-center">
         <input
           name="name"
           type="name"
           placeholder="name"
-          className="w-full md:w-1/2 py-3 focus:outline-none px-3 bg-transparent border-2 focus:border-[#08DAFA] placeholder:focus:text-[#08DAFA] rounded shadow-lg hover:shadow-[#08DAFA] duration-1000 hover:scale-105  "
+          className="w-full py-3 focus:outline-none px-3 bg-transparent border-2 focus:border-[#08DAFA] placeholder:focus:text-[#08DAFA] rounded shadow-lg hover:shadow-[#08DAFA] duration-1000 hover:scale-105  "
           required
         />
 
@@ -76,7 +76,7 @@ const Register = () => {
           name="email"
           type="email"
           placeholder="email"
-          className="w-full md:w-1/2 py-3 focus:outline-none px-3 bg-transparent border-2 focus:border-[#08DAFA] placeholder:focus:text-[#08DAFA] rounded shadow-lg hover:shadow-[#08DAFA] duration-1000 hover:scale-105  "
+          className="w-full py-3 focus:outline-none px-3 bg-transparent border-2 focus:border-[#08DAFA] placeholder:focus:text-[#08DAFA] rounded shadow-lg hover:shadow-[#08DAFA] duration-1000 hover:scale-105  "
           required
         />
 
@@ -84,7 +84,7 @@ const Register = () => {
           name="photo"
           type="text"
           placeholder="Image Link..."
-          className="w-full md:w-1/2 py-3 focus:outline-none px-3 bg-transparent border-2 focus:border-[#08DAFA] placeholder:focus:text-[#08DAFA] rounded shadow-lg hover:shadow-[#08DAFA] duration-1000 hover:scale-105  "
+          className="w-full py-3 focus:outline-none px-3 bg-transparent border-2 focus:border-[#08DAFA] placeholder:focus:text-[#08DAFA] rounded shadow-lg hover:shadow-[#08DAFA] duration-1000 hover:scale-105  "
           required
         />
 
@@ -92,7 +92,7 @@ const Register = () => {
           name="password"
           type="password"
           placeholder="password"
-          className="w-full md:w-1/2 py-3 focus:outline-none px-3 bg-transparent border-2 focus:border-[#08DAFA] placeholder:focus:text-[#08DAFA] rounded shadow-lg hover:shadow-[#08DAFA] duration-1000 hover:scale-105  "
+          className="w-full py-3 focus:outline-none px-3 bg-transparent border-2 focus:border-[#08DAFA] placeholder:focus:text-[#08DAFA] rounded shadow-lg hover:shadow-[#08DAFA] duration-1000 hover:scale-105  "
           required
         />
         <p className="text-red-400">{error}</p>

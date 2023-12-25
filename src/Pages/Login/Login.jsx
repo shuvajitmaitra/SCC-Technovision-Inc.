@@ -58,15 +58,17 @@ const handleGoogleSignIn = () =>{
 
   };
   return (
-    <div className="pt-32 md:pt-20">
-      <h3 className="text-5xl font-bold text-center my-10">Login</h3>
+    <div className="py-10 max-w-5xl mx-auto">
+        <h3 className="text-3xl border-b-2 lg:text-6xl font-bold text-white pb-2 mb-10">
+        Login
+      </h3>
       <form
         onSubmit={handleSignIn}
-        className="w-full md:w-3/4 space-y-3 mx-auto flex flex-col justify-center items-center"
+        className="w-full md:w-[400px] border rounded-lg p-6  space-y-3 mx-auto flex flex-col justify-center items-center"
       >
         <input
             type="email"
-            className="w-full md:w-1/2 py-3 my-3 focus:outline-none px-3 bg-transparent border-2 focus:border-[#08DAFA] placeholder:focus:text-[#08DAFA] rounded shadow-lg hover:shadow-[#08DAFA] duration-1000 hover:scale-105  "
+            className="w-full py-3 my-3 focus:outline-none px-3 bg-transparent border-2 focus:border-[#08DAFA] placeholder:focus:text-[#08DAFA] rounded shadow-lg hover:shadow-[#08DAFA] duration-1000 hover:scale-105  "
 
             placeholder="Email"
             name="email"
@@ -74,7 +76,7 @@ const handleGoogleSignIn = () =>{
           />
         <input
             type="password"
-            className="w-full md:w-1/2 py-3 focus:outline-none px-3 bg-transparent border-2 focus:border-[#08DAFA] placeholder:focus:text-[#08DAFA] rounded shadow-lg hover:shadow-[#08DAFA] duration-1000 hover:scale-105  "
+            className="w-full py-3 focus:outline-none px-3 bg-transparent border-2 focus:border-[#08DAFA] placeholder:focus:text-[#08DAFA] rounded shadow-lg hover:shadow-[#08DAFA] duration-1000 hover:scale-105  "
 
             placeholder="Password"
             name="password"

@@ -6,8 +6,10 @@ import Layout from "../MainLayout/Layout";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Dashboard from "../MainLayout/Dashboard";
-import AddTask from "../Pages/Dashboard/AddTask/AddTask";
 import Task from "../Pages/Dashboard/Task/Task";
+import About from "../Pages/About/About";
+import { Contact } from "../Pages/Contact/Contact";
+import PrivateRoutes from "./PrivateRoutes";
 
 const Router = createBrowserRouter([
     {
@@ -19,23 +21,27 @@ const Router = createBrowserRouter([
           element: <Home></Home>
         },
         {
-          path: "/login",
+          path: "about",
+          element: <About></About>
+        },
+        {
+          path: "contact",
+          element: <Contact></Contact>
+        },
+        {
+          path: "login",
           element: <Login></Login>
         },
         {
-          path: "/register",
+          path: "register",
           element: <Register/>
         }
       ]
     },
     {
       path: "/dashboard",
-      element: <Dashboard/>,
+      element: <PrivateRoutes><Dashboard/></PrivateRoutes>,
       children: [
-        {
-          path: "add-task",
-          element: <AddTask/>
-        },
         {
           path: "task",
           element: <Task/>
